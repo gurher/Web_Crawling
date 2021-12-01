@@ -18,7 +18,17 @@ spans = []
 for page in pages:
     spans.append(page.find('span'))
     
-print(spans[:-1]) 
+# print(spans[:-1]) 
 
+##2 4 Extracting Indeed Pages part Two
+
+links = pagination.find_all('a')
+pages = []
+for link in links[:-1]:
+    pages.append(int(link.string))
+
+
+max_pages = pages[-1]
+print(max_pages)
 
 
